@@ -3,14 +3,14 @@ import scoreStore from '../store/scoreStore';
 
 type OptionProps = {
     description: string,
-    isCorrect: boolean
+    isCorrect: any
 };
 
 const Option = ({description, isCorrect} : OptionProps) => {
 
     const increaseScore = scoreStore((state) => state.increaseScore);
 
-    const handleChange = (event) => {
+    const handleChange = (event : any) => {
         // condition ? exprIfTrue : exprIfFalse
         event.target.value === 'true' 
             ? handleAnswer(true)

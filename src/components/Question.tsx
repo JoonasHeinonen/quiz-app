@@ -4,14 +4,14 @@ import Option from './Option.tsx';
 type QuestionProps = {
     question: String,
     totalOptions: any,
-    key: any
+    questionKey: any
 };
 
-const Question = ({ question, totalOptions, key } : QuestionProps) => {
+const Question = ({ question, totalOptions, questionKey } : QuestionProps) => {
     return (
-        <div className='question' key={key}>
+        <div className='question' key={questionKey}>
             <p>{question}</p>
-            {totalOptions.map((option) => (
+            {totalOptions.map((option : any) => (
                 <Option description={option.label} isCorrect={option.isCorrect} key={option.id} />
             ))}
         </div>
