@@ -2,9 +2,10 @@ import React from 'react';
 import QuestionsList from './QuestionsList.tsx';
 import Scoreboard from './Scoreboard.tsx';
 import scoreStore from '../store/scoreStore.js';
+import QuestionProps from './Types/QuestionProps.tsx';
 
 type GameProps = {
-    questions: Array<Object>
+    questions: Array<QuestionProps>
 };
 
 const Game = ({ questions } : GameProps) => {
